@@ -1,0 +1,25 @@
+﻿body {
+}
+
+.git-item-container {
+    width: 50%;
+}
+
+.avatar {
+    width: 20px;
+    height: 20px;
+}
+
+.git-items-list {
+    margin: 10px 0px 10px 0px;
+    opacity: 0.8;
+
+}
+
+.git-items-list:hover {
+    opacity: 1;
+}
+
+.git-item-link {
+    float: right;
+}

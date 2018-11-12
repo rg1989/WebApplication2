@@ -1,0 +1,26 @@
+﻿@using WebApplication2.Models;
+@model List<GitItemModel>
+@{
+    ViewBag.Title = "Favorites";
+    var list = Model;
+}
+
+<h2>Favorites</h2>
+
+@if (list.Count > 0)
+{
+    <ul class="git-item-container">
+        @for (int i = 0; i < list.Count; i++)
+        {
+            <li class="git-items-list">
+                <img class="avatar" src="@list[i].imageUrl" />
+                <span>@list[i].name</span>
+
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <span>No favourites selected yet</span>
+}

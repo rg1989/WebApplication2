@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div ng-app="gitRepoApp">
+    <div ng-controller="homePageCtrl as vm">
+        <h1>{{vm.t}}</h1>
+        <input type="text" ng-model="vm.serchText" placeholder="search online" />
+        <input type="button" ng-click="vm.searchByVal()" value="Search" />
+        <input type="button" ng-click="vm.clrSearch()" value="Clear" />
+        <ul class="git-item-container">
+            <li class="git-items-list" ng-repeat="item in vm.itemsList">
+                <img class="avatar" src="{{item.owner.avatar_url}}" />
+                <span>{{item.name}}</span>
+
+                <a class="git-item-link" href="#" ng-click="vm.setFavItem(item)">add to favourites</a>
+            </li>
+        </ul>
+    </div>
+</div>
